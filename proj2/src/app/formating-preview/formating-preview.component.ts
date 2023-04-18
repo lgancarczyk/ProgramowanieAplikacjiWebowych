@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CSS } from '../models/css.model';
 
 @Component({
   selector: 'app-formating-preview',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./formating-preview.component.scss']
 })
 export class FormatingPreviewComponent {
-
+  @Input() css: CSS = {
+    color: undefined,
+    border: undefined,
+    'box-shadow': undefined,
+    background: undefined
+  }
 }

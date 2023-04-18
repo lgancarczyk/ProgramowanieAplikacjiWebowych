@@ -1,1 +1,22 @@
-<p>formating-preview works!</p>
+<h2>Podgląd formatowania</h2>
+<div [ngClass]="'form-row'">
+    <div [ngClass]="'form-columns-2'">
+        <div [ngClass]="'form-column'">
+            <p>Pole tekstowe</p>
+            <input [ngStyle]="css" />
+        </div>
+        <div [ngClass]="'form-column'">
+            <p>Przycisk</p>
+            <button [ngStyle]="css">Kliknij</button>
+        </div>
+    </div>
+
+</div>
+<div [ngClass]="'form-row'">
+    <div>
+        <p>Kolor tekstu</p>
+        <div id="egzampleDiv" [ngStyle]="css">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam illo modi, culpa recusandae corrupti asperiores exercitationem laboriosam magnam dolore inventore voluptate perspiciatis.  
+        </div>
+    </div>
+</div>

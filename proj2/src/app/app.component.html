@@ -1,4 +1,18 @@
 <app-navbar></app-navbar>
 <div [ngClass]="'content'">
-  fdf
+  <div [ngClass]="'form-columns-2 items-center'">
+    <div [ngClass]="'form-column'">
+      <div [ngClass]="'boxField'">
+        <app-formating (childToParent)="childToParent($event)"></app-formating>
+      </div>
+      <div [ngClass]="'boxField mt-4'">
+        <app-formating-preview [css]="css"></app-formating-preview>
+      </div>
+    </div>
+    <div [ngClass]="'form-column'">
+      <div [ngClass]="'boxField'">
+        <app-css-preview [css]="css"></app-css-preview>
+      </div>
+    </div>
+  </div>
 </div>

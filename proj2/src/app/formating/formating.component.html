@@ -1,1 +1,23 @@
-<p>formating works!</p>
+<h2>Formatowanie</h2>
+<div [ngClass]="'form-columns-2'">
+    <div [ngClass]="'form-column'">
+        <div [ngClass]="'form-row'">
+            <p>Kolor tekstu</p>
+            <input type="text" #box1 (keyup)="updateValue(box1.value, 'color')"/>
+        </div>
+        <div [ngClass]="'form-row'">
+            <p>Kolor tła</p>
+            <input type="text" #box2 (keyup)="updateValue(box2.value, 'background')"/>
+        </div>
+    </div>
+    <div [ngClass]="'form-column'">
+        <div [ngClass]="'form-row'">
+            <p>Obramowanie</p>
+            <input type="text" #box3 (keyup)="updateValue(box3.value, 'border')"/>
+        </div>
+        <div [ngClass]="'form-row'">
+            <p>Cień</p>
+            <input type="text" #box4 (keyup)="updateValue(box4.value, 'shadow')"/>
+        </div>
+    </div>
+</div>

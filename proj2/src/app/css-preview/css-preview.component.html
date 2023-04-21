@@ -1,9 +1,18 @@
 <h2>Wygenerowany kod css</h2>
 <div [ngClass]="'codeField'">
-    .styling {{'{'}}
-    <div *ngIf="showColor">
-        <p>Color: {{css.color}};</p>
+    .styling{{'{'}}
+    <!-- *ngIf="showColor" -->
+    <div [ngClass]="'codeFieldElement'" *ngIf="css.color != undefined && css.color !=''">
+        <p> color: {{css.color}};</p>
     </div>
-
+    <div [ngClass]="'codeFieldElement'" *ngIf="css.background != undefined && css.background !=''">
+        <p> background-color: {{css.background}};</p>
+    </div>
+    <div [ngClass]="'codeFieldElement'" *ngIf="css.border != undefined && css.border !=''">
+        <p> border-style: {{css.border}};</p>
+    </div>
+    <div [ngClass]="'codeFieldElement'" *ngIf="css['box-shadow'] != undefined && css['box-shadow'] !=''">
+        <p>box-shadow: {{css['box-shadow']}};</p>
+    </div>
     {{'}'}}
 </div>

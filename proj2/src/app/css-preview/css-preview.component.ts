@@ -15,9 +15,6 @@ export class CssPreviewComponent {
     background: undefined
   }
 
-  getDiff = (x:any) => {return(x != undefined) ? true : false}
-  
-
-
-  showColor: boolean = this.getDiff(this.css.color)
+  //getDiff = (x:any) => {return(x != undefined) ? true : false}
+  //showColor: boolean = this.getDiff(this.css.color)
 }

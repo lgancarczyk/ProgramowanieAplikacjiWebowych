@@ -1,1 +1,96 @@
-<p>my-form works!</p>
+<div [formGroup]="invoice">
+    <h3>Issuer:</h3>
+    <div [ngClass]="'formSectionContainer'" formGroupName="issuer">
+        <div [ngClass]="'inputContainer'">
+            <h4>Name</h4>
+            <input type="text" formControlName="name"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>City</h4>
+            <input type="text" formControlName="city"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>Address</h4>
+            <input type="text" formControlName="name"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>Zip Code</h4>
+            <input type="text" formControlName="city"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>Nip</h4>
+            <input type="text" formControlName="name"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>Banck number</h4>
+            <input type="text" formControlName="city"/>
+        </div>
+    </div>
+    <h3>Purchaser:</h3>
+    <div [ngClass]="'formSectionContainer'" formGroupName="purchaser">
+        <div [ngClass]="'inputContainer'">
+            <h4>Name</h4>
+            <input type="text" formControlName="name"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>City</h4>
+            <input type="text" formControlName="city"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>Address</h4>
+            <input type="text" formControlName="name"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>Zip Code</h4>
+            <input type="text" formControlName="city"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>Nip</h4>
+            <input type="text" formControlName="name"/>
+        </div>
+    </div>
+    <div [ngClass]="'formSectionContainer'">
+        <div [ngClass]="'inputContainer'">
+            <h4>Invoice number</h4>
+            <input type="text" formControlName="invoiceNumber"/>
+        </div>
+        <div [ngClass]="'inputContainer'">
+            <h4>Payment method</h4>
+            <select formControlName="paymentMethod">
+                  <option [ngValue]="'card'">card</option>
+                  <option [ngValue]="'cash'">cash</option>
+                  <option [ngValue]="'transfer'">transfer</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <h4>Items</h4>
+        <button (click)="onAddItem()">Add item</button>
+        <div *ngFor="let item of invoice.controls.items.controls" style="display: flex;">
+          <div>
+            Name: <input type="text" [formControl]="item.controls.name">
+          </div>
+          <div>
+            Quantity: <input type="text" [formControl]="item.controls.quantity">
+          </div>
+          <div>
+            Price: <input type="text" [formControl]="item.controls.price">
+          </div>
+          <div>
+            Vat:
+            <select [formControl]="item.controls.vat">
+                <option [ngValue]="0">0%</option>
+                <option [ngValue]="5">5%</option>
+                <option [ngValue]="8">8%</option>
+                <option [ngValue]="23">23%</option>
+            </select>
+          </div>
+          <div>
+            Value: {{ (item.controls.price.value ?? 0) * (item.controls.quantity.value ?? 0)}}
+          </div>
+        </div>
+      </div>
+    
+</div>
+
+<button (click)="onSubmit()">Sumbit</button>

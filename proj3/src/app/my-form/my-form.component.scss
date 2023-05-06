@@ -1,0 +1,27 @@
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    h4{
+        margin: 0;
+    }
+    input{
+        border-radius: 5px;
+        border-width: 1px;
+    }
+    select{
+        border-radius: 5px;
+        border-width: 1px;
+    }
+}
+.formSectionContainer{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: solid 2px rgb(100, 95, 95);
+}
+h3{
+    margin: 0;
+}

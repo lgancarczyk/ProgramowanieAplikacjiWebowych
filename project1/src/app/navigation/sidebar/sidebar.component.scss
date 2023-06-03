@@ -1,0 +1,14 @@
+.sideNavContainer{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.buttonsContainer{
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}

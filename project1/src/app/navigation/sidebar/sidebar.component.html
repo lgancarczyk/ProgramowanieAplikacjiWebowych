@@ -1,0 +1,26 @@
+<div class="sideNavContainer">
+  <div class="userIconContainer contentRow">
+    <img class="userIcon" src={{imagePath}} (click)="userIconClick()">
+  </div>
+
+  <div class="buttonsContainer contentRow">
+    <button mat-raised-button color="primary" (click)="onLogin()">Log In</button>
+    <button mat-stroked-button color="accent" (click)="onRegister()">Register</button>
+  </div>
+  <hr>
+  <div class="NavigationContainer">
+    <mat-list role="list">
+      <a href="#" (click)="toggleSideNav()"><mat-list-item role="listitem">Item 1</mat-list-item></a>
+      <a href="#" (click)="toggleSideNav()"><mat-list-item role="listitem">Item 2</mat-list-item></a>
+      <a href="#" (click)="toggleSideNav()"><mat-list-item role="listitem">Item 3</mat-list-item></a>
+    </mat-list>
+  </div>
+  <hr>
+  <div class="NavigationContainer">
+    <mat-list role="list">
+      <a href="#" (click)="toggleSideNav()"><mat-list-item role="listitem">Pricing</mat-list-item></a>
+      <a href="#" (click)="toggleSideNav()"><mat-list-item role="listitem">About</mat-list-item></a>
+    </mat-list>
+  </div>
+  
+</div>
